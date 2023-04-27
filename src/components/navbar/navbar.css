@@ -1,0 +1,64 @@
+.navbar{
+    width: 100%;
+    height:4rem;
+    color: white;
+    padding:20px 0 10px 0px;
+    position: fixed;
+    z-index: 999;
+    background: linear-gradient(to left, transparent -20%, rgba(0, 0, 0, 0.7) 50% );
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 0 10px;
+}
+.navbar-left{
+    margin-left: 10px;
+    font-size: 20px;
+   
+
+}
+
+.logo{
+    padding-left: 10px;
+    cursor: pointer;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+   
+}
+
+
+@keyframes logo {
+    0%{
+        color: white;
+    }
+
+   
+    100%{
+        color: cyan;
+       
+    }
+}
+.navbar-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.navbar-nav{
+    margin-right: 15px;
+    cursor: pointer;
+    
+}
+.navbar-nav:hover{
+    color:rgb(9, 226, 226);
+}
+
+.link{
+    text-decoration: none;
+     color:inherit;
+}

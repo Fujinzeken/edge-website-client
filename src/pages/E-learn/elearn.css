@@ -1,0 +1,26 @@
+.elearn{
+    height: 100vh;
+}
+
+.onlineClassesAvailable{
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    background-color: rgb(229, 233, 236);
+    overflow: hidden;
+}
+
+.class-card{
+   margin-bottom: 30px;
+   display: flex;
+   width: 40%;
+   padding: 20px 20px;
+}
+
+.smwords{
+    font-size: 14px;
+    line-height: 1.2rem;
+    color: rgb(102, 101, 101);
+    
+}

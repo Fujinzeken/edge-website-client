@@ -1,0 +1,68 @@
+.image-top{
+    height: 90vh;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text{
+    background-color: white;
+    position: relative;
+    top: -370px;
+    left: 70px;
+    width: 35%;
+}
+
+.text-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+.image-text{
+    border-bottom: none;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.image-para{
+    border-top: none;
+    padding-bottom: 10px;
+}
+
+.e-learn-btn{
+    width: 40%;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(4, 148, 148);
+    border: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: 16px;
+}
+.e-learn-btn:hover{
+    background-color: aqua;
+}
+.sliderArrow{
+    position: absolute;
+    bottom: 380px;
+    z-index: 20;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.left, .right{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0 10px;
+    color: white;
+}

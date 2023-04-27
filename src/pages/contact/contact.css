@@ -1,0 +1,44 @@
+.contact{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formInput{
+    width: 200px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    border-radius: 10px;
+    background-color:  rgb(229, 233, 236);
+    padding: 10px;
+    outline: none;
+}
+
+.formTextArea{
+    height: 200px;
+    width: 300px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color:  rgb(229, 233, 236);
+    padding: 10px;
+    outline: none;
+}
+.formbtn{
+    padding: 7px 10px;
+    background-color:rgb(159, 159, 219);
+    cursor: pointer;
+}

@@ -1,0 +1,50 @@
+.programs{
+    background-color: rgb(229, 233, 236);
+    padding: 20px;
+    height: 750px;
+    
+}
+
+.imgContainer{
+    display: flex;
+    width: 60%;
+    margin-top: 50px;
+   
+}
+
+.productImg{
+   margin: 0px 30px 20px 50px;
+   width: 50%;
+   height: auto;
+}
+
+.productImg:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.imgContainer.second{
+    display: block;
+    margin-left: 40%;
+    
+}
+
+.imgContainer.second>.productImg{
+    float: right;
+    margin-left: 20px;
+    
+}
+
+.words{
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: rgb(102, 101, 101);
+    
+}
+.learnMore{
+    padding: 7px 10px;
+    background-color:blueviolet ;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
