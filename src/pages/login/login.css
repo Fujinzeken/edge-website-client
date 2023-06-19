@@ -1,31 +1,49 @@
 .login {
-  height: 100vh;
-}
-
-.loginContainer {
+  height: 82vh;
+  overflow-y: auto;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: blueviolet;
-  padding: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
-.loginform {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.image {
+  height: 100%;
 }
 
-.loginInput {
-  padding: 7px;
-  width: 200px;
+.image img {
+  height: 100%;
+}
+
+.form__input {
   border: none;
+  border-radius: 10px;
+  border-bottom: 1px solid #475467;
   outline: none;
+  padding: 10px;
 }
 
-.loginbtn {
-  padding: 5px;
-  border: none;
+.signIn__link {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.signIn__link p {
+  font-size: 0.8rem;
+}
+.signIn__link span {
+  color: #53389e;
+  font-size: 1rem;
   cursor: pointer;
-  background-color: aqua;
+}
+.signIn__link button {
+  background-color: #53389e;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 15px;
+  font-size: 1rem;
+  cursor: pointer;
 }

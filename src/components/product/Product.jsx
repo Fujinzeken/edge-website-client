@@ -19,7 +19,7 @@ const Product = () => {
         <span>Advanced</span>
       </div>
       <div className="product__btn">
-        <button>Start Course</button>
+        <button>Learn More</button>
         <span>$20</span>
       </div>
     </div>
