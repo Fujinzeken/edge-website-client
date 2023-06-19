@@ -1,29 +1,39 @@
-import React from 'react'
-import "./programs.css"
+import React from "react";
+import "./programs.css";
+import { Col, Container, Row } from "reactstrap";
+import Product from "../product/Product";
 function Programs() {
   return (
-    <div className='programs'>
-        <div className='imgContainer'>
-         <img className='productImg' src='https://images.unsplash.com/photo-1470784591255-6c7c80d419c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWZyaWNhbiUyMG1hbiUyMHBsYXlpbmclMjBwaWFub3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' 
-         alt=''/>
-         <div>
-         <h2>Realize your dreams</h2>
-         <p className='words'>Words  is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
-         <button className='learnMore'>Learn More</button>
-         </div>
-        </div>
-        <div className='imgContainer second'>
-         <img className='productImg' src='https://images.unsplash.com/photo-1470784591255-6c7c80d419c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWZyaWNhbiUyMG1hbiUyMHBsYXlpbmclMjBwaWFub3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' 
-         alt=''/>
-         <div>
-         <h2>Realize your dreams</h2>
-         <p className='words'>Words  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
-         <button className='learnMore'>Learn More</button>
-         </div>
-        </div>
-    </div>
-  )
+    <Container className="mt-5">
+      <Row>
+        <Col lg="12" className="program__title">
+          <h1 className="mb-3">Our Programs</h1>
+          <h5>
+            A wealth of knowledge at your fingertips, whether you choose to
+            study at our learning center in Lagos or take our
+            <strong>
+              <span> Online</span>
+            </strong>{" "}
+            classes, our courses will meet your expectations
+          </h5>
+        </Col>
+      </Row>
+      <Row>
+        <Col lg="3" md="4" sm="6" xs="6" className="mt-5">
+          <Product />
+        </Col>
+        <Col lg="3" md="4" sm="6" xs="6" className="mt-5">
+          <Product />
+        </Col>
+        <Col lg="3" md="4" sm="6" xs="6" className="mt-5">
+          <Product />
+        </Col>
+        <Col lg="3" md="4" sm="6" xs="6" className="mt-5">
+          <Product />
+        </Col>
+      </Row>
+    </Container>
+  );
 }
 
-export default Programs
+export default Programs;

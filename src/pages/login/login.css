@@ -1,35 +1,31 @@
-.login{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.login {
+  height: 100vh;
 }
 
-.loginContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: blueviolet;
-    padding: 50px;
-    
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: blueviolet;
+  padding: 50px;
 }
 
-.loginform{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.loginform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.loginInput{
-    padding: 7px;
-    width: 200px;
-    border: none;
-    outline: none;
+.loginInput {
+  padding: 7px;
+  width: 200px;
+  border: none;
+  outline: none;
 }
 
-.loginbtn{
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-    background-color: aqua;
+.loginbtn {
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: aqua;
 }

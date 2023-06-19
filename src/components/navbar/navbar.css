@@ -1,64 +1,198 @@
-.navbar{
-    width: 100%;
-    height:4rem;
-    color: white;
-    padding:20px 0 10px 0px;
-    position: fixed;
-    z-index: 999;
-    background: linear-gradient(to left, transparent -20%, rgba(0, 0, 0, 0.7) 50% );
+.navbar {
+  width: 100%;
+  height: 4rem;
+  padding: 20px 0 10px 0px;
 }
 
-.navbar-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0 0 10px;
+.scrolled {
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* background: #fff; */
+  z-index: 999;
+  box-shadow: 5px 5px 15px -5px #6941c6;
+  width: 100%;
+  height: 5rem;
+  padding: 20px 0 10px 0px;
+  background: linear-gradient(to top, trasnparent 0%, rgb(0, 0, 0, 0.3) 50%);
 }
-.navbar-left{
-    margin-left: 10px;
-    font-size: 20px;
-   
-
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 0 10px;
+  width: 100%;
+  justify-content: center;
+}
+.navbar-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 50px;
+  font-size: 20px;
+  width: 70%;
+  color: black;
 }
 
-.logo{
-    padding-left: 10px;
-    cursor: pointer;
-    animation-name: logo;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-   
+.logo {
+  padding-left: 10px;
+  cursor: pointer;
+  animation-name: logo;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
+.search {
+  display: flex;
+  padding: 5px 5px 5px 25px;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.search button {
+  padding: 2px 15px;
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.search input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
 
 @keyframes logo {
-    0%{
-        color: white;
-    }
+  0% {
+    color: black;
+  }
 
-   
-    100%{
-        color: cyan;
-       
-    }
+  100% {
+    color: #6941c6;
+  }
 }
-.navbar-right{
-    display: flex;
-    justify-content: space-between;
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+  color: black;
+}
+
+.navbar-nav {
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.reg-btn {
+  padding: 7px 10px;
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.navbar-nav:hover {
+  color: #6941c6;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.navbar-toggler {
+  display: none;
+  height: min-content;
+  margin: 18px -10px 0 0;
+  cursor: pointer;
+}
+
+.navbar-toggler .bar {
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background: black;
+  border-radius: 10%;
+  transition: 0.4s;
+}
+#toggle {
+  display: none;
+}
+#toggle:checked ~ .navbar-container {
+  transform: translateY(0);
+}
+#toggle:checked ~ .navbar-toggler .bar {
+  margin-top: 20px;
+}
+#toggle:checked ~ .navbar-toggler .bar:nth-child(1) {
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+#toggle:checked ~ .navbar-toggler .bar:nth-child(2) {
+  display: none;
+}
+
+#toggle:checked ~ .navbar-toggler .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+@media (max-width: 675px) {
+  .navbar {
+    background-color: #6941c6;
+    position: relative;
+    height: 2rem;
+  }
+  .navbar-toggler {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    margin: 10px 10px;
+    z-index: 90;
+  }
+
+  .search,
+  .logo {
+    display: none;
+  }
+
+  .navbar-container {
+    width: 100%;
+    background: #6941c6;
+    transition: 0.6s;
+    transform: translateY(-100%);
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: 35px 0;
+  }
+  .navbar-left {
+    flex-direction: column;
+    margin-left: 0;
+    width: fit-content;
+    gap: 5px;
+    color: #fff;
     align-items: center;
-    margin-right: 50px;
-}
+    padding-left: 10px;
+  }
 
-.navbar-nav{
-    margin-right: 15px;
-    cursor: pointer;
-    
-}
-.navbar-nav:hover{
-    color:rgb(9, 226, 226);
-}
-
-.link{
-    text-decoration: none;
-     color:inherit;
+  .navbar-right {
+    position: relative;
+    top: -25px;
+    left: -100px;
+    color: #fff;
+  }
+  .navbar-nav:hover {
+    color: black;
+  }
 }
