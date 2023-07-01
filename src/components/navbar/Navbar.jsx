@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { AuthProvider } from "../../context/AuthContext";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+
+  const { user, logout } = useContext(AuthProvider);
 
   useEffect(() => {
     window.onscroll = () => {
       setScrolled(window.pageYOffset === 0 ? false : true);
     };
   }, [scrolled]);
-  const user = false;
   return (
     <div className={scrolled ? "scrolled" : "navbar"}>
       <input type="checkbox" id="toggle" />
@@ -41,7 +43,9 @@ function Navbar() {
         <div className="navbar-right">
           {user ? (
             <Link to="/" className="link">
-              <span className="navbar-nav">Logout</span>
+              <span onClick={logout} className="navbar-nav">
+                Logout
+              </span>
             </Link>
           ) : (
             <>

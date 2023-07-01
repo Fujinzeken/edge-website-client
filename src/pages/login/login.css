@@ -1,17 +1,8 @@
-.login {
-  height: 82vh;
-  overflow-y: auto;
+.form__wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.image {
-  height: 100%;
-}
-
-.image img {
-  height: 100%;
 }
 
 .form__input {
@@ -20,6 +11,7 @@
   border-bottom: 1px solid #475467;
   outline: none;
   padding: 10px;
+  background-color: #fff;
 }
 
 .signIn__link {

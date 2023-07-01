@@ -1,6 +1,6 @@
 .App {
   /* background-color: rgb(229, 233, 236); */
-  background-color: #f2f4f7;
+  background-color: #f2f4f7 !important;
 }
 
 * {

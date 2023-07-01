@@ -1,26 +1,68 @@
-import React from 'react'
-import "./testimonials.css"
-function Testimonials() {
-  return (
-    <div className='testimonials'>
-        <div className='testimonial-container'>
-            <img className='testimonial-img' src='https://images.unsplash.com/photo-1622673705547-2609427981ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHlvdW5nJTIwbWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alt=''/>
-            <p className='testimonial-name'>Shola</p>
-            <p className='testimonial-speech'> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
-            <p className='testimonial-speech job'><i>Student</i></p>
-        </div>
-        <div className='testimonial-cta'>
-        <img className='productImg' src='https://images.unsplash.com/photo-1470784591255-6c7c80d419c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWZyaWNhbiUyMG1hbiUyMHBsYXlpbmclMjBwaWFub3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' 
-         alt=''/>
-          <div>
-            <h2>Realize your dreams</h2>
-            <p className='testimonial-speech'>Hundreds of students have trusted Edge Music Academy with their Musical Education,
-            Join our student body today!.</p>
-            <button className='learnMore'>Become a student</button>
-          </div>
-        </div>
-    </div>
-  )
-}
+import React from "react";
+import Slider from "react-slick";
 
-export default Testimonials
+import ava1 from "../../images/ava-1.jpg";
+import ava2 from "../../images/ava-2.jpg";
+import ava3 from "../../images/ava-3.jpg";
+import "./testimonials.css";
+import { Col, Container, Row } from "reactstrap";
+// react-slick settings
+const Testimonials = () => {
+  const settings = {
+    dots: true,
+    autoplay: true,
+    infinite: true,
+    speed: 1000,
+    autoplaySpeed: 5000,
+    swipetoSlide: true,
+    slidesToShow: 1,
+    slidersToScroll: 1,
+  };
+  return (
+    <Container className="mt-5 mb-5 testimonial__wrapper shadow p-3 mb-5 rounded">
+      <Row>
+        <Col>
+          <Slider {...settings}>
+            <div>
+              <div className="slider__content d-flex align-items-center gap-2">
+                <img src={ava1} alt="customer-avatar" className="" />
+                <h6>John Doe</h6>
+              </div>
+              <p className="review__text">
+                Dolore dolore ea minim laboris.Culpa deserunt id aute anim sunt
+                ea qui eu anim sit dolore sit duis magna. Lorem exercitation
+                eiusmod in ullamco amet laboris occaecat voluptate.
+              </p>
+            </div>
+
+            <div>
+              <div className="slider__content d-flex align-items-center gap-2">
+                <img src={ava2} alt="customer-avatar" className="" />
+                <h6>Jannet Doe</h6>
+              </div>
+              <p className="review__text">
+                Dolore dolore ea minim laboris.Culpa deserunt id aute anim sunt
+                ea qui eu anim sit dolore sit duis magna. Lorem exercitation
+                eiusmod in ullamco amet laboris occaecat voluptate.
+              </p>
+            </div>
+
+            <div>
+              <div className="slider__content d-flex align-items-center gap-2">
+                <img src={ava3} alt="customer-avatar" className="" />
+                <h6>Mitch Mitchellson</h6>
+              </div>
+              <p className="review__text">
+                Dolore dolore ea minim laboris.Culpa deserunt id aute anim sunt
+                ea qui eu anim sit dolore sit duis magna. Lorem exercitation
+                eiusmod in ullamco amet laboris occaecat voluptate.
+              </p>
+            </div>
+          </Slider>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default Testimonials;

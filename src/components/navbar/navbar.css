@@ -65,6 +65,7 @@
   border: none;
   outline: none;
   font-size: 16px;
+  background-color: inherit;
 }
 
 @keyframes logo {
