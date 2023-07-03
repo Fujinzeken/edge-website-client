@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./login.css";
 import { Container, Col, Row } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,7 +11,7 @@ import Loader from "../../components/loader/Loader";
 import { AuthProvider } from "../../context/AuthContext";
 
 function Login() {
-  const { loading, login } = useContext(AuthProvider);
+  const { loading, login, user } = useContext(AuthProvider);
   const navigate = useNavigate();
 
   const loginSchema = yup.object().shape({
@@ -31,8 +31,11 @@ function Login() {
         message: "Email or Password is Invalid",
       });
     });
-    navigate("/");
   };
+
+  useEffect(() => {
+    if (user) navigate("/");
+  });
   return (
     <Container className="pb-5">
       {loading && <Loader />}

@@ -21,6 +21,7 @@ const AuthContext = ({ children }) => {
       setUser(res.data);
       setLoading(false);
     } catch (err) {
+      setLoading(false);
       if (err) errCallback();
     }
   };
@@ -36,6 +37,7 @@ const AuthContext = ({ children }) => {
       setUser(res.data);
       setLoading(false);
     } catch (err) {
+      setLoading(false);
       if (errCallback) errCallback();
     }
   };

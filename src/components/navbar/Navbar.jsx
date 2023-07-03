@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { AuthProvider } from "../../context/AuthContext";
+import avatar from "../../images/ava-1.jpg";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,11 +43,19 @@ function Navbar() {
         </div>
         <div className="navbar-right">
           {user ? (
-            <Link to="/" className="link">
-              <span onClick={logout} className="navbar-nav">
-                Logout
-              </span>
-            </Link>
+            <div className="user__profile">
+              <Link to="/" className="link">
+                <button onClick={logout} className="reg-btn">
+                  Logout
+                </button>
+              </Link>
+              <img src={avatar} alt="" className="profile__image" />
+              <div className="profile">
+                <h3>Username</h3>
+                <p>Profile</p>
+                <p>Settings</p>
+              </div>
+            </div>
           ) : (
             <>
               <Link to="/login" className="link">
