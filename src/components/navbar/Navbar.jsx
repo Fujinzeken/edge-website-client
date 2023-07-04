@@ -1,19 +1,26 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../../context/AuthContext";
 import avatar from "../../images/ava-1.jpg";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [showDorpdown, setShowDropdown] = useState(false);
 
-  const { user, logout } = useContext(AuthProvider);
-
+  const navigate = useNavigate();
+  const { logout } = useContext(AuthProvider);
+  const user = localStorage.getItem("user");
   useEffect(() => {
     window.onscroll = () => {
       setScrolled(window.pageYOffset === 0 ? false : true);
     };
   }, [scrolled]);
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/");
+  };
   return (
     <div className={scrolled ? "scrolled" : "navbar"}>
       <input type="checkbox" id="toggle" />
@@ -44,16 +51,43 @@ function Navbar() {
         <div className="navbar-right">
           {user ? (
             <div className="user__profile">
-              <Link to="/" className="link">
-                <button onClick={logout} className="reg-btn">
-                  Logout
-                </button>
-              </Link>
-              <img src={avatar} alt="" className="profile__image" />
-              <div className="profile">
-                <h3>Username</h3>
-                <p>Profile</p>
-                <p>Settings</p>
+              <button onClick={handleLogout} className="reg-btn">
+                Logout
+              </button>
+
+              <div onMouseEnter={() => setShowDropdown(true)}>
+                <img src={avatar} alt="" className="profile__image" />
+                <span>Username</span>
+              </div>
+              <div
+                className={showDorpdown ? "profile" : "no__profile"}
+                onMouseLeave={() => setShowDropdown(false)}
+              >
+                <div className="profile__dropdown user__info">
+                  <img
+                    src={avatar}
+                    alt=""
+                    className="w-25 rounded-circle m-2"
+                  />
+                  <span>Username</span>
+                </div>
+
+                <div className="profile__dropdown options ">
+                  <span>My learning</span>
+                  <span>Cart</span>
+                  <span>Wishlist</span>
+                  <span>Become an instructor</span>
+                </div>
+
+                <div className="profile__dropdown options ">
+                  <span>Notifications</span>
+                  <span>Messages</span>
+                </div>
+
+                <div className="profile__dropdown options ">
+                  <span>Settings</span>
+                  <span>Payment Info</span>
+                </div>
               </div>
             </div>
           ) : (

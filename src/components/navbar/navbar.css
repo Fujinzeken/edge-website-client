@@ -156,30 +156,59 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .profile {
   position: absolute;
   top: 70px;
-  right: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-left: 25px;
-  display: none;
+  margin-right: 25px;
+  border: 1px solid #eaecf0;
 }
 
-.profile h3,
-p {
+.no__profile {
+  display: none;
+}
+.profile__dropdown {
+  width: 100%;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.user__info {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   cursor: pointer;
 }
 
-.profile h3,
-p:hover {
+.user__info span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.user__info span:hover {
+  color: #6941c6;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.options span {
+  cursor: pointer;
+}
+
+.options span:hover {
   color: #6941c6;
 }
 
@@ -229,6 +258,10 @@ p:hover {
     top: -25px;
     left: -100px;
     color: #fff;
+  }
+
+  .profile {
+    color: black !important;
   }
   .navbar-nav:hover {
     color: black;

@@ -18,6 +18,7 @@ const AuthContext = ({ children }) => {
         email: email,
         password: password,
       });
+      localStorage.setItem("user", JSON.stringify(res.data));
       setUser(res.data);
       setLoading(false);
     } catch (err) {
@@ -34,6 +35,7 @@ const AuthContext = ({ children }) => {
         email,
         password,
       });
+      localStorage.setItem("user", JSON.stringify(res.data));
       setUser(res.data);
       setLoading(false);
     } catch (err) {
@@ -43,7 +45,12 @@ const AuthContext = ({ children }) => {
   };
 
   const handleLogout = async () => {
-    setUser("");
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setUser("");
+      localStorage.removeItem("user");
+    }, 2000);
   };
   const value = {
     registration: handleRegistration,

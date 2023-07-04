@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "./register.css";
 import { Col, Container, Row } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,12 +6,11 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import music from "../../images/music01.png";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Loader from "../../components/loader/Loader";
 import { AuthProvider } from "../../context/AuthContext";
 
 function Register() {
   const navigate = useNavigate();
-  const { loading, registration } = useContext(AuthProvider);
+  const { registration, user } = useContext(AuthProvider);
 
   const regSchema = yup.object().shape({
     fistName: yup.string().required("Please enter a firstName"),
@@ -39,17 +38,24 @@ function Register() {
     navigate("/");
   };
 
+  useEffect(() => {
+    if (user) navigate("/");
+  });
+
   return (
     <>
       <Container className="pb-5">
-        {loading && <Loader />}
         <Row>
           <Col>
             <div>
               <img src={music} alt="" className="w-100" />
             </div>
           </Col>
-          <Col className="mt-5 pt-4 d-flex flex-column align-items-center justify-center">
+          <Col
+            sm="6"
+            md="6"
+            className="mt-5 pt-4 d-flex flex-column align-items-center justify-center"
+          >
             <h3 className="mb-4">Register </h3>
             <form
               className="form mb-3 form__wrapper"

@@ -6,12 +6,10 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import music from "../../images/music01.png";
-
-import Loader from "../../components/loader/Loader";
 import { AuthProvider } from "../../context/AuthContext";
 
 function Login() {
-  const { loading, login, user } = useContext(AuthProvider);
+  const { login, user } = useContext(AuthProvider);
   const navigate = useNavigate();
 
   const loginSchema = yup.object().shape({
@@ -38,7 +36,6 @@ function Login() {
   });
   return (
     <Container className="pb-5">
-      {loading && <Loader />}
       <Row>
         <Col>
           <div>
