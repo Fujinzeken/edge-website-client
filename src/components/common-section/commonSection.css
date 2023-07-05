@@ -1,0 +1,9 @@
+.common__section {
+  background: linear-gradient(#212245b2, #212245b2),
+    url("../../images/guitar-Guitar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+  /* margin-bottom: 50px; */
+}

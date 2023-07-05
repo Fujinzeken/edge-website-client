@@ -13,6 +13,7 @@ import { useContext } from "react";
 import { AuthProvider } from "./context/AuthContext";
 import Loader from "./components/loader/Loader";
 import Footer from "./components/footer/Footer";
+import CourseDetails from "./components/courseDetails/CourseDetails";
 //import {useState} from 'react'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
           <Route path="/e-learn" element={<Elearn />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/login" element={<Login />} />
