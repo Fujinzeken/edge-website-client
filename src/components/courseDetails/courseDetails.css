@@ -2,3 +2,44 @@
   height: 50px;
   margin-bottom: 20px;
 }
+
+.rating__wrapper {
+  background-color: #1d2939;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  /* text-align: center; */
+}
+
+.tabs {
+  padding: 7px;
+  background-color: transparent;
+  border: 1px solid #7f56d9 !important;
+  transition: 0.2s;
+  cursor: pointer;
+  align-items: center;
+}
+
+.tabs__active {
+  padding: 5px 10px;
+  background-color: #7f56d9;
+  color: white;
+  border: none;
+}
+
+.tabs:hover {
+  background-color: #1d2939;
+  color: #fff;
+}
+.tabs__active:hover {
+  background-color: #1d2939;
+  cursor: pointer;
+}
+
+.list__ul {
+  list-style: none;
+}
+
+.list__ul .list:before {
+  content: "✓";
+}
