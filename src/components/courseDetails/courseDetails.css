@@ -43,3 +43,58 @@
 .list__ul .list:before {
   content: "✓";
 }
+
+.instructor {
+  margin: 40px 0 10px;
+  justify-content: center;
+}
+
+.instructor img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.star {
+  background-color: red !important;
+}
+
+.price_section {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.image_container {
+  width: 100%;
+}
+.course-image {
+  height: 250px;
+  object-fit: cover;
+}
+
+.time__left {
+  font-size: 14px;
+  color: #7f56d9;
+  text-align: center;
+}
+
+.buy__btn {
+  background-color: #7f56d9;
+  width: 100%;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.cart__btn {
+  background-color: #1d2939;
+  width: 100%;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 10px;
+  color: #fff;
+}

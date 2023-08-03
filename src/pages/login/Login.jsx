@@ -64,7 +64,7 @@ function Login() {
             <div className="d-flex flex-column align-items-start mb-3">
               <label>Password</label>
               <input
-                type="text"
+                type="password"
                 placeholder="Enter password..."
                 className="form__input"
                 {...register("password")}

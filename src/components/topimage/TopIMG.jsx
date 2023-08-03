@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./topimg.css";
 import guitar from "../../images/guitar-Guitar.png";
+import { Link } from "react-router-dom";
 
 function TopIMG() {
   return (
@@ -19,7 +20,9 @@ function TopIMG() {
               experienced instructors
             </p>
             <div className="hero__btn">
-              <button className="e__learn">Get Started</button>
+              <Link to="/courses">
+                <button className="e__learn">Get Started</button>
+              </Link>
               <button className="get__demo">Get free Demo</button>
             </div>
           </div>

@@ -18,6 +18,7 @@ import CourseDetails from "./components/courseDetails/CourseDetails";
 
 function App() {
   const { loading } = useContext(AuthProvider);
+
   return (
     <div className="App">
       <Router>

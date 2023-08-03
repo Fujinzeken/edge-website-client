@@ -101,7 +101,7 @@ function Register() {
               <div className="d-flex flex-column align-items-start">
                 <label className="mb-1">Password</label>
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Enter password..."
                   className="form__input"
                   {...register("password")}
